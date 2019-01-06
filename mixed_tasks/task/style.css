@@ -1,0 +1,25 @@
+/*#myProgress {
+	width: 100%;
+	background-color: grey;
+}
+
+#myBar {
+	width: 1%;
+	height: 30px;
+	background-color: green;
+}*/
+
+.f1 {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+
+}
+.s2 {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-color: green;
+
+}
