@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<title>Recipe</title>
+</head>
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+		const IngerdientsList = React.createClass({
+			displayName: "IngerdientsList",
+			render() {
+				return React.createElement("ul", {"className": "ingredients"},
+					React.createElement("li", null, "1 lb Salmon"),
+					React.createElement("li", null, "1 cup Pine Nuts"),
+					React.createElement("li", null, "2 cups Butter Lettuce"),
+					React.createElement("li", null, "1 Yellow Squash"),
+					React.createElement("li", null, "1/2 cup Olive Oil"),
+					React.createElement("li", null, "3 cloves of Garlic")
+					)
+				}
+			});
+
+
+			ReactDOM.render(
+				<IngerdientsList/>,
+				document.getElementById('root')
+			);
+	</script>
+</body>
+</html>
