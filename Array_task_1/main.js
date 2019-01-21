@@ -1,19 +1,26 @@
 let a, b, c;
 
-let arr = [a, b, c];
-let main_arr = [];
+let arr = [1, 2, 3];
+let main_arr = [],new_arr;
+let hold;
 let leng = arr.length;
 
-for (let i = 0; i < leng; i++) {
-    let new_arr = arr.reverse();
-    for (let j = 0; j < leng*2; i++) {
-        main_arr[j] = new_arr;
-        if (!main_arr.every(x => x === new_arr)) {
-            let hold = new_arr[i];
-            new_arr[i] = new_arr[i + 1];
-            new_arr[i + 1] = hold;
-        }
+for (let i = 0; i < leng*2; i++) {
+    if (i == leng) {
+        let first = arr.shift();
+        let second = arr.shift()
+        arr.push(second);
+        arr.push(first);
+        console.log(first);
     }
+    new_arr = arr.slice();
+    for (let j = 0; j < leng-1; j++) {
+        hold = arr[j];
+        arr[j] = arr[j+1];
+        arr[j +1] = hold;
+    }
+    main_arr[i] = new_arr;
+
 }
 
 console.log(main_arr);
